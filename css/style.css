@@ -453,10 +453,11 @@ button {
 }
 
 .promotion-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: url(../img/ryzhaya_t_fona.png), #FFD37C;
+  background: #FFD37C;
   background-repeat: no-repeat;
   background-position: right;
   border-radius: 8px;
@@ -465,8 +466,34 @@ button {
   margin-top: 50px;
 }
 
+.promotion-card img {
+  position: absolute;
+  bottom: 0;
+  right: -5px;
+  z-index: 0;
+}
+
+.promotion-card div {
+  z-index: 5;
+}
+
+.promotions:nth-child(1) img {
+  width: 218px;
+  height: 260px;
+}
+
+.promotions:nth-child(2) img {
+  width: 269px;
+  height: 264px;
+}
+
+.promotions:nth-child(3) img {
+  width: 198px;
+  height: 289px;
+}
+
 .promotions:nth-child(2) .promotion-card {
-  background: url(../img/ryzhaya_t_fona.png), #E0E9F3;
+  background: #E0E9F3;
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -967,15 +994,18 @@ button {
   line-height: 13px;
   color: #888888;
 }
+
 .clinik-socials {
   position: relative;
   padding-top: 333px;
   padding-bottom: 441px;
 }
-.photo-band, .likes-band {
+
+.photo-band,
+.likes-band {
   position: absolute;
   top: 0;
-  margin: 0 auto; 
+  margin: 0 auto;
   display: flex;
   flex-wrap: nowrap;
 }
@@ -1048,14 +1078,17 @@ button {
   line-height: 13px;
   color: #6A6A6A;
 }
+
 .likes-band {
   position: absolute;
   bottom: -500px;
   height: 300px;
 }
+
 .like-img {
   width: 300px;
   height: 300px;
   margin-right: 19px;
-  background: linear-gradient(0deg, rgba(238, 238, 238, 0.3), rgba(238, 238, 238, 0.3)), url(../img/like1.png);;
+  background: linear-gradient(0deg, rgba(238, 238, 238, 0.3), rgba(238, 238, 238, 0.3)), url(../img/like1.png);
+  ;
 }
